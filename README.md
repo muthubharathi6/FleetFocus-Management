@@ -1,108 +1,138 @@
-# FleetFocus - Fleet Management System
+# FleetFocus – Fleet Management System
 
-A full-stack Fleet Management web application with a modern React frontend and Spring Boot backend.
+A full-stack fleet management web application built to manage vehicles, drivers, trips, maintenance activities, and fleet operations through a centralized dashboard.
 
----
+## 🚀 Technology Stack
+
+**Frontend**
+- React.js
+- JavaScript
+- Redux Toolkit
+- Axios
+- HTML and CSS
+
+**Backend**
+- Java
+- Spring Boot
+- Spring Security
+- JWT Authentication
+- Maven
+- REST APIs
+
+**Database**
+- MySQL
+
+## ✨ Key Features
+
+- **Dashboard:** Centralized fleet overview and operational information.
+- **Vehicle Management:** Manage vehicle records and information.
+- **Driver Management:** Maintain driver details and records.
+- **Trip Management:** Manage and track trip information.
+- **Maintenance Management:** Maintain vehicle maintenance records.
+- **Authentication:** Secure login and authentication using JWT.
+- **Monitoring:** Support for fleet monitoring and telemetry-related data.
 
 ## 📁 Project Structure
 
-```
-fleetanti/
-├── backend/                  # Spring Boot Java Backend
-│   ├── src/                  # Source code (Controllers, Services, Models, Repositories)
-│   ├── pom.xml               # Maven dependencies and build configuration
-│   └── mvnw / mvnw.cmd       # Maven wrapper scripts
-├── frontend/                 # React Frontend
-│   ├── src/                  # React components, Redux store, CSS design system
-│   │   ├── components/       # Dashboard, Vehicles, Trips, Maintenance, Layout
-│   │   ├── services/         # API services (Axios)
-│   │   ├── store/            # Redux Toolkit state slices
-│   │   ├── App.js            # Main routing and dashboard assembly
-│   │   └── index.css         # Complete dark/light theme design system
-│   ├── public/               # Public assets & HTML template
-│   └── package.json          # Frontend dependencies and test scripts
-├── login.html                # Standalone preview login page
-└── README.md                 # Setup and run instructions
+```text
+fleetfocus-project/
+│
+├── backend/
+│   ├── .mvn/
+│   │   └── wrapper/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/com/example/demo/
+│   │       │   ├── config/
+│   │       │   ├── controller/
+│   │       │   ├── dto/
+│   │       │   ├── entity/
+│   │       │   ├── exception/
+│   │       │   ├── repository/
+│   │       │   └── service/
+│   │       └── resources/
+│   │           └── application.properties
+│   ├── pom.xml
+│   ├── mvnw
+│   └── mvnw.cmd
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── _mocks_/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── services/
+│   │   ├── store/
+│   │   ├── styles/
+│   │   ├── utils/
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── login.html
+├── README.md
+└── .gitignore
 ```
 
----
-
-## 🚀 How to Run Locally
+## ⚙️ Installation and Setup
 
 ### Prerequisites
-- **Node.js**: v18 or later (with `npm`)
-- **Java JDK**: 17 or later
-- **MySQL**: Running locally on port `3306` (or update database config in `application.properties`)
 
----
+- Java JDK
+- Maven (or use the included Maven wrapper)
+- Node.js and npm
+- MySQL Server
 
-### Step 1: Start the Backend (Spring Boot)
+### 1. Clone the Repository
 
-1. Open a terminal in the `backend/` folder:
-   ```bash
-   cd backend
-   ```
-
-2. Configure MySQL Database:
-   - Make sure MySQL is running on `localhost:3306`.
-   - Open `src/main/resources/application.properties` and verify your username and password:
-     ```properties
-     spring.datasource.url=jdbc:mysql://localhost:3306/db1?createDatabaseIfNotExist=true
-     spring.datasource.username=root
-     spring.datasource.password=***REMOVED***
-     ```
-
-3. Run the Spring Boot application:
-   - On Windows:
-     ```cmd
-     mvnw.cmd spring-boot:run
-     ```
-   - On Mac/Linux:
-     ```bash
-     ./mvnw spring-boot:run
-     ```
-   - Or with Maven installed:
-     ```bash
-     mvn spring-boot:run
-     ```
-
-The backend server will start on **`http://localhost:8080`**.
-
----
-
-### Step 2: Start the Frontend (React)
-
-1. Open a new terminal in the `frontend/` folder:
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the React development server:
-   ```bash
-   npm start
-   ```
-
-The application will automatically open in your browser at **`http://localhost:3000`**.
-
----
-
-### Step 3: Run the Test Suite (Optional)
-
-In the `frontend/` directory, run:
 ```bash
-npm test -- --watchAll=false --ci
+git clone https://github.com/muthubharathi6/FleetFocus-Management.git
+cd FleetFocus-Management
 ```
-All **30 unit and integration tests** will execute and pass cleanly.
 
----
+### 2. Configure the Database
 
-## 🎨 Features & Highlights
-- **Futuristic High-Tech Dashboard**: Live GPS radar fleet tracking, 75% utilization circular radial gauge, Trip Overview dual bar charts (7D/30D/3M), Expense breakdown donut, Vehicle Status meters, and Upcoming Maintenance alerts.
-- **Full Theme Support**: Polished Dark Mode and Light Mode with a one-click toggle in the sidebar.
-- **Role-Based Access Control**: Secure JWT authentication supporting `FLEET_MANAGER` and `DRIVER` roles.
-- **RESTful Endpoints**: Full CRUD support for vehicles, trips, maintenance logs, and live monitoring.
+- Start your MySQL server.
+- Create the required database.
+- Configure the database URL, username, and password in `backend/src/main/resources/application.properties`.
+- Keep database credentials private. Do not commit passwords or secret keys.
+
+### 3. Run the Backend
+
+Open a terminal:
+
+```bash
+cd backend
+mvnw.cmd spring-boot:run
+```
+
+### 4. Run the Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+The frontend and backend will run locally on their configured ports.
+
+## 🔐 Security
+
+The application uses Spring Security and JWT-based authentication for protected API access.
+
+## 👨‍💻 Developer
+
+**Muthubharathi R**
+
+- GitHub: https://github.com/muthubharathi6
+- LinkedIn: https://www.linkedin.com/in/muthubharathi-r-280080326/
+
+## 📌 Project
+
+FleetFocus – Fleet Management System
+
