@@ -97,8 +97,8 @@ cd FleetFocus-Management
 
 - Start your MySQL server.
 - Create the required database.
-- Configure the database URL, username, and password in `backend/src/main/resources/application.properties`.
-- Keep database credentials private. Do not commit passwords or secret keys.
+- Configure `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, and `JWT_SECRET` as environment variables before running the backend.
+- Never commit actual database credentials or secret keys.
 
 ### 3. Run the Backend
 
