@@ -1,0 +1,28 @@
+@'
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Java build files
+target/
+
+# Frontend build files
+dist/
+build/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+'@ | Set-Content -Path ".gitignore" -Encoding UTF8
