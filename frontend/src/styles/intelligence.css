@@ -1,0 +1,166 @@
+/* ============================================================================
+   FLEETFOCUS PHASE 5 — FUEL & EXPENSES + ANALYTICS & REPORTS STYLES
+   ============================================================================ */
+
+.ff-transparency-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: var(--ff-radius-md);
+  background: var(--ff-info-bg);
+  border: 1px solid var(--ff-info-border);
+  color: var(--ff-text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.ff-transparency-banner strong {
+  color: var(--ff-text-primary);
+}
+
+.ff-transparency-icon {
+  color: var(--ff-cyan-bright);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ff-intel-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+
+.ff-intel-grid-2 > * {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ff-fuel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ff-fuel-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--ff-bg-surface-subtle);
+  border: 1px solid var(--ff-border-subtle);
+}
+
+.ff-fuel-row-left {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ff-fuel-row-right {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.ff-export-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+  gap: 12px;
+}
+
+.ff-export-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--ff-border);
+  background: var(--ff-bg-surface-subtle);
+  color: var(--ff-text-primary);
+  text-align: left;
+  transition: all var(--ff-transition);
+}
+
+.ff-export-tile:hover:not(:disabled) {
+  border-color: var(--ff-border-strong);
+  background: var(--ff-gradient-subtle);
+  transform: translateY(-1px);
+}
+
+.ff-export-tile:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ff-export-tile-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ff-text-primary);
+}
+
+.ff-export-tile-sub {
+  font-size: 11.5px;
+  color: var(--ff-text-muted);
+}
+
+.ff-monthly-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ff-monthly-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ff-monthly-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+}
+
+@media (max-width: 1024px) {
+  .ff-intel-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Clean Print / PDF Report Mode */
+@media print {
+  .ff-sidebar,
+  .ff-topbar,
+  .ff-page-header-actions,
+  .ff-toolbar,
+  .ff-no-print {
+    display: none !important;
+  }
+
+  .ff-shell .main-content-area {
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  body,
+  .ff-card,
+  .ff-kpi,
+  .ff-page-header {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+}

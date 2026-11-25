@@ -1,0 +1,237 @@
+/* ============================================================================
+   FLEETFOCUS PHASE 3 — OPERATIONS PAGES (VEHICLES, TRIPS, LIVE FLEET)
+   ============================================================================ */
+
+.ff-inline-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--ff-radius-md);
+  border: 1px solid var(--ff-border);
+  font-size: 13.5px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.ff-inline-alert.is-success {
+  background: var(--ff-success-bg);
+  border-color: var(--ff-success-border);
+  color: var(--ff-success);
+}
+
+.ff-inline-alert.is-error {
+  background: var(--ff-danger-bg);
+  border-color: var(--ff-danger-border);
+  color: var(--ff-danger);
+}
+
+.ff-inline-alert-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ff-cell-primary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.ff-cell-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--ff-info-bg);
+  border: 1px solid var(--ff-info-border);
+  color: var(--ff-cyan-bright);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ff-cell-stack {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ff-cell-title {
+  font-weight: 700;
+  color: var(--ff-text-primary);
+  line-height: 1.25;
+}
+
+.ff-cell-sub {
+  font-size: 12px;
+  color: var(--ff-text-muted);
+  margin-top: 2px;
+}
+
+.ff-row-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ff-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid var(--ff-border-subtle);
+  flex-wrap: wrap;
+}
+
+.ff-pagination-meta {
+  font-size: 13px;
+  color: var(--ff-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.ff-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Enterprise Forms inside Modals */
+.ff-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ff-form-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ff-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ff-field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ff-text-secondary) !important;
+}
+
+.ff-field-help {
+  font-size: 11.5px;
+  color: var(--ff-text-muted);
+}
+
+.ff-required {
+  color: var(--ff-danger);
+  margin-left: 3px;
+}
+
+.ff-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 14px;
+  margin-top: 4px;
+  border-top: 1px solid var(--ff-border-subtle);
+}
+
+.ff-summary-box {
+  padding: 14px;
+  border-radius: var(--ff-radius-md);
+  background: var(--ff-bg-surface-subtle);
+  border: 1px solid var(--ff-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ff-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ff-detail-item {
+  padding: 12px;
+  border-radius: var(--ff-radius-md);
+  background: var(--ff-bg-surface-subtle);
+  border: 1px solid var(--ff-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ff-detail-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ff-text-muted);
+}
+
+.ff-detail-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ff-text-primary);
+  word-break: break-word;
+}
+
+/* Live Fleet Coordinate Map Banner */
+.ff-live-map-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.ff-live-radar-large {
+  position: relative;
+  height: 250px;
+  border-radius: var(--ff-radius-md);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.14) 0%, transparent 65%),
+    var(--ff-bg-input);
+  border: 1px solid var(--ff-border);
+  overflow: hidden;
+}
+
+.ff-fuel-cell {
+  min-width: 115px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ff-fuel-cell-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 960px) {
+  .ff-live-map-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ff-form-grid-2,
+  .ff-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
